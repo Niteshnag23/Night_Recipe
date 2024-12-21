@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const RecipeManager = ({ recipes, setRecipes }) => {
@@ -6,20 +7,39 @@ const RecipeManager = ({ recipes, setRecipes }) => {
     ingredients: "",
     steps: "",
   });
+  const [searchIngredient, setSearchIngredient] = useState("");
+  const [fetchedRecipes, setFetchedRecipes] = useState([]);
 
   const addRecipe = () => {
-    if (newRecipe.name.trim() && newRecipe.ingredients.trim() && newRecipe.steps.trim()) {
+    if (newRecipe.name && newRecipe.ingredients && newRecipe.steps) {
       setRecipes([
         ...recipes,
         {
-          name: newRecipe.name.trim(),
-          ingredients: newRecipe.ingredients.split(",").map((item) => item.trim()),
-          steps: newRecipe.steps.split(",").map((item) => item.trim()),
+          name: newRecipe.name,
+          ingredients: newRecipe.ingredients.split(","),
+          steps: newRecipe.steps.split(","),
         },
       ]);
       setNewRecipe({ name: "", ingredients: "", steps: "" });
-    } else {
-      alert("All fields are required to add a recipe.");
+    }
+  };
+
+  const fetchRecipesByIngredient = async () => {
+    if (!searchIngredient.trim()) return;
+
+    try {
+      const response = await fetch(
+        `https://your-api-endpoint.com/search?ingredient=${searchIngredient}&key=AIzaSyA9bzRLesQezoC5nnhYid_3NG4geyX7j5Y`
+      );
+      const data = await response.json();
+
+      if (response.ok) {
+        setFetchedRecipes(data.recipes || []); // Assuming API returns an array of recipes
+      } else {
+        console.error("Error fetching recipes:", data.message);
+      }
+    } catch (error) {
+      console.error("Error making API request:", error);
     }
   };
 
@@ -45,6 +65,22 @@ const RecipeManager = ({ recipes, setRecipes }) => {
         value={newRecipe.steps}
       ></textarea>
       <button onClick={addRecipe}>Add Recipe</button>
+
+      <h2>Search Recipes by Ingredient</h2>
+      <input
+        type="text"
+        value={searchIngredient}
+        onChange={(e) => setSearchIngredient(e.target.value)}
+        placeholder="Enter ingredient"
+      />
+      <button onClick={fetchRecipesByIngredient}>Search</button>
+
+      <h3>Search Results:</h3>
+      <ul>
+        {fetchedRecipes.map((recipe, index) => (
+          <li key={index}>{recipe.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
