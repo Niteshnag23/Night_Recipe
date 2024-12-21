@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  /* Container */
+  div {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Form Styles */
+  input, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #007bff;
+  }
+
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+
+  button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  /* List Styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  li p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  li button {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  li button:hover {
+    background: #a71d2a;
+  }
+
+  /* Header Styles */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    div {
+      padding: 15px;
+    }
+
+    input, textarea, button {
+      font-size: 0.9rem;
+    }
+  }
+/* General button styling */
+button {
+    padding: 3px 6px; /* Reduced padding for smaller size */
+    font-size: 11px;   /* Smaller but readable font size */
+    border: none;
+    border-radius: 3px; /* Subtle rounded corners */
+    cursor: pointer;
+    margin: 0 4px; /* Minimal spacing between buttons */
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Edit button styling */
+  button.edit-btn {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+
+  button.edit-btn:hover {
+    background-color: #45a049;
+  }
+
+  button.edit-btn:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+  }
+
+  /* Delete button styling */
+  button.delete-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+
+  button.delete-btn:hover {
+    background-color: #e53935;
+  }
+
+  button.delete-btn:active {
+    background-color: #d32f2f;
+    transform: scale(0.95);
+  }
+
+  /* Save button styling */
+  button.save-btn {
+    background-color: #008cba; /* Blue */
+    color: white;
+  }
+
+  button.save-btn:hover {
+    background-color: #007bb5;
+  }
+
+  button.save-btn:active {
+    background-color: #005f8c;
+    transform: scale(0.95);
+  }
+
+  /* Cancel button styling */
+  button.cancel-btn {
+    background-color: #9e9e9e; /* Grey */
+    color: white;
+  }
+
+  button.cancel-btn:hover {
+    background-color: #757575;
+  }
+
+  button.cancel-btn:active {
+    background-color: #616161;
+    transform: scale(0.95);
+  }
+
+  /* Universal hover effect for all buttons (optional) */
+  button:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5); /* Focus indicator */
+  }

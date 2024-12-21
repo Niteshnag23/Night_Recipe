@@ -1,0 +1,25 @@
+
+{
+    "ingredients": ["tomato", "cheese", "bread"],
+    "recipes": [
+      {
+        "name": "Grilled Cheese Sandwich",
+        "ingredients": ["cheese", "bread"],
+        "steps": [
+          "Take two slices of bread.",
+          "Add cheese.",
+          "Grill until golden."
+        ]
+      },
+      {
+        "name": "Tomato Soup",
+        "ingredients": ["tomato", "salt", "water"],
+        "steps": [
+          "Boil tomatoes.",
+          "Blend them.",
+          "Add salt and serve."
+        ]
+      }
+    ]
+  }
+  

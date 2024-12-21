@@ -1,0 +1,25 @@
+.recipe-suggestions {
+    margin-top: 20px;
+  }
+  
+  .recipe-suggestions h2 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  p {
+    color: #6c757d;
+  }
+  
